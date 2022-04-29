@@ -15,7 +15,7 @@ function getStudent(req, res){
     }
 }
 
-function postStudents(req, res){
+function postStudent(req, res){
     if(!req.body.name || !req.body.age){
         return res.status(400).json({
             error: "Name and age are required"
@@ -36,5 +36,5 @@ function postStudents(req, res){
 module.exports = {
     getStudents,
     getStudent,
-    postStudents
+    postStudent
 };
