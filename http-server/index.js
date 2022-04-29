@@ -33,8 +33,6 @@ server.on('request', (req, res) => {
         res.end('<h1>Learn HTTP APIs and Routing</h1>');
 
     } else if(endPoint === "students"){
-
-
         if(req.method === "GET"){
             res.statusCode == 200;
             res.setHeader('Content-Type', 'application/json');
@@ -52,7 +50,6 @@ server.on('request', (req, res) => {
                     };
                 }
             }
-
             res.end(JSON.stringify(result));
         } else if(req.method === "POST"){
             req.on('data', (data) => {
@@ -64,7 +61,6 @@ server.on('request', (req, res) => {
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
                 res.end(JSON.stringify(student));
-                
             });
         }
     } else{
